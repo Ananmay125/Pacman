@@ -75,6 +75,13 @@ li:hover{
     justify-content: center;
 }
 
+main{
+    background-image: url("/pacman-hero-1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
 .hero-text{
     color: white;
     text-align: center;
@@ -125,4 +132,66 @@ li:hover{
     height: 30px;
     margin-top: 20px;
     margin-right: 10px;
+}
+
+.emulate-game-div{
+    width: 100%;
+    height: 380px;
+    background-image: url("/pacman-emulate-section-2.jpg");
+    background-size: cover;
+    background-clip: border-box;
+    background-attachment: fixed;
+    background-position: top;
+    margin-bottom: 30px;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.emulate-game-text{
+    font-size: 50px;
+    margin-left: 0px;
+    margin-bottom: 0;
+    padding-top: 40px;
+    color: deepskyblue;
+}
+
+.emulate-game-p{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: lightblue;
+}
+
+.emulate-game-text-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.emulate-box{
+    width: 570px;
+    height: 330px;
+    border-radius: 15px;
+    background-color: #181818;
+    margin-top: 25px;
+    margin-left: 140px;
+    display: flex;
+    justify-content: center;
+}
+
+.emulate{
+    width: 550px;
+    height: 310px;
+    border-radius: 15px;
+    margin-top: 5px;
+    border: 5px blue groove;
+    display: flex;
+    justify-content: center;
+}
+
+.emulate-box-text{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 125px;
 }

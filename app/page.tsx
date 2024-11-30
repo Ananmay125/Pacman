@@ -23,6 +23,17 @@ export default function Home() {
           <div className="button-div">
             <button className="get-started">Get Started</button>
           </div>
+          <div className="emulate-game-div">
+            <div className="emulate-game-text-div">
+              <h1 className="emulate-game-text">Want to emulate <br/> your own game?</h1>
+              <p className="emulate-game-p">Drop a ROM in this box</p>
+            </div>
+            <div className="emulate-box">
+              <div className="emulate">
+                <h2 className="emulate-box-text">Drop the ROM here</h2>
+              </div>
+            </div>
+          </div>
       </main>
     </>
   );
