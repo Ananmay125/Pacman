@@ -1,0 +1,148 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url(/pacman-hero-1.jpg);
+    padding: 0;
+    height: fit-content;
+    margin: 0;
+}
+
+*{
+    font-family: silkScreen;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: left;
+}
+
+.main-heading{
+    color: yellow;
+}
+
+.sign-text{
+    color: white;
+}
+
+.logo{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 60px;
+}
+
+.logo-1{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.footer-li, .footer-li-2{
+    color: white;
+}
+
+.form-container{
+    width: 100%;
+    height: fit-content;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-container-div{
+    width: 480px;
+    height: 400px;
+    padding-top: 40px;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+}
+
+label{
+    width: fit-content;
+}
+
+input{
+    width: 330px;
+    height: 35px;
+    background-color: black;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-left: 20px;
+    color: white;
+}
+
+form{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.form-1{
+    background-color: blueviolet;
+    width: 400px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+.form-1-div{
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    cursor: pointer;
+    transition: scale 0.5s;
+}
+
+button:hover{
+    scale: 105%;
+}
+
+.github-button{
+    width: 200px;
+    height: 30px;
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    margin-top: 14px;
+    border: 0;
+}
+
+.credential-signin-button{
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: yellow;
+    color: black;
+    border: 0;
+}

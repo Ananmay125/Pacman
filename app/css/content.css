@@ -1,0 +1,46 @@
+#main-section{
+    background-color: #181818;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 100px;
+}
+
+.content-div{
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 0;
+}
+
+.game-card-div{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin: 0px 10px 0px 40px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+
+.game-card{
+    width: 280px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: black;
+    margin: 0px 0px 0px 10px;
+    padding-top: 0;
+    background-image: url("/pacman-hero-1.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: scale 0.5s;
+}
+
+.game-card:hover{
+    scale: 120%;
+}
+
+.content-heading{
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 0;
+    font-size: 40px;
+    margin: 0px 0px 0px 50px;
+}

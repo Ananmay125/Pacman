@@ -1,5 +1,6 @@
-import "./page.css";
-import "./footer.css"
+import "./css/page.css";
+import "./css/footer.css"
+import "./css/content.css"
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           <li className="navbar-li">Favorites</li>
           <li className="navbar-li">Home</li>
           <li className="navbar-li">Peak</li>
-          <li className="navbar-li">Spicy_32</li>
+          <li className="navbar-li">{}</li>
         </ul>
         <img src="favicon.ico" className="avatar"></img>
       </nav>
@@ -22,7 +23,7 @@ export default function Home() {
             <h1 className="hero-text">Play any <span>Arcade</span> games from <span>anywhere!</span></h1>
           </div>
           <div className="button-div">
-            <button className="get-started"><a href="#emulate-game-div">Get Started</a></button>
+            <button className="get-started"><a href="#main-section">Get Started</a></button>
           </div>
           <div id="emulate-game-div">
             <div className="emulate-game-text-div">
@@ -36,8 +37,34 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="main-section">
-
+          <div id="main-section">
+            <div className="content-div">
+                <h1 className="content-heading">Popular Games</h1>
+                <div className="game-card-div">
+                  <div className="game-card"></div>
+                  <div className="game-card"></div>
+                  <div className="game-card"></div>
+                  <div className="game-card"></div>
+                </div>
+            </div>
+            <div className="content-div">
+                <h1 className="content-heading">Popular Games</h1>
+                <div className="game-card-div">
+                  <div className="game-card"></div>
+                  <div className="game-card"></div>
+                  <div className="game-card"></div>
+                  <div className="game-card"></div>
+                </div>
+            </div>
+            <div className="content-div">
+                <h1 className="content-heading">Popular Games</h1>
+                <div className="game-card-div">
+                  <div className="game-card"></div>
+                  <div className="game-card"></div>
+                  <div className="game-card"></div>
+                  <div className="game-card"></div>
+                </div>
+            </div>
           </div>
       </main>
       <footer>
