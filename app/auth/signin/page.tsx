@@ -1,4 +1,4 @@
-import { signIn } from '@/auth.ts'
+import { signIn } from '@/auth'
 import "@/app/css/authentication.css" 
 import "@/app/css/footer.css"
 
