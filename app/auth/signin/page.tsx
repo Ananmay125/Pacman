@@ -1,4 +1,3 @@
-import { signIn } from "@/auth"
 import "@/app/css/authentication.css" 
 import "@/app/css/footer.css"
 
@@ -12,10 +11,11 @@ export default function SignIn() {
       <div className="form-container">
         <div className="form-container-div">
           <form
-              action={async (formData) => {
-                  "use server"
-                  await signIn("credentials", formData, "github")
-              } }>
+              // action={async (formData) => {
+              //     "use server"
+              //     await signIn("credentials", formData)
+              // } }
+              >
               <h1>Login</h1>
               <label>
                   Email<br/>
@@ -32,10 +32,11 @@ export default function SignIn() {
       </div>
       <div className="form-1-div">
         <form className="form-1"
-          action={async () => {
-              "use server"
-              await signIn("github")
-          } }>
+          // action={async () => {
+          //     "use server"
+          //     await signIn("github")
+          // } }
+          >
           <button className="github-button" type="submit">Signin with GitHub</button>
         </form>
       </div>
