@@ -26,7 +26,7 @@ export default function SignIn() {
                   <input name="password" type="password" /><br/>
               </label>
               <button className="credential-signin-button">Sign Up</button>
-              <p>Don't have an account sign up <a className="sign-text" href="signin">here</a></p>
+              <p>Don&apos;t have an account sign up <a className="sign-text" href="signin">here</a></p>
             </form>
         </div>
       </div>
