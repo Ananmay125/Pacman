@@ -146,3 +146,12 @@ button:hover{
     color: black;
     border: 0;
 }
+
+.error-message{
+    margin-top: 0;
+    color: white;
+    background-color: coral;
+    padding: 10px;
+    border: 0;
+    border-radius: 4px;
+}

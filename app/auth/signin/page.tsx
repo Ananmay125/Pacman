@@ -1,8 +1,24 @@
-import { signIn } from '@/auth'
+"use client"
 import "@/app/css/authentication.css" 
 import "@/app/css/footer.css"
+import { useState } from 'react'
 
-export default function SignIn() {
+export default function signIn() {
+
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+
+    if(!name || !password){
+      setError("All Fields are nessasary");
+    }else {
+      setError("");
+    }
+  };
+
   return (
     <>
       <nav>
@@ -11,36 +27,30 @@ export default function SignIn() {
       </nav>
       <div className="form-container">
         <div className="form-container-div">
-          <form
-              action={async (formData) => {
-             "use server"
-              await signIn("credentials", formData)
-              } }
-              >
+          <form onSubmit={handleSubmit}>
               <h1>Login</h1>
               <label>
-                  Email<br/>
-                  <input name="email" type="email" /><br/>
+                  Username<br/>
+                  <input onChange={(e) => setName(e.target.value)} name="username" type="text" /><br/>
               </label>
               <label>
                   Password<br/>
-                  <input name="password" type="password" /><br/>
+                  <input onChange={(e) => setPassword(e.target.value)} name="password" type="password" /><br/>
               </label>
               <button className="credential-signin-button">Sign In</button>
-              <p>already signed up? login <a className="sign-text" href="signup">here</a></p>
+              <p>Don&apos;t have an account sign up <a className="sign-text" href="signin">here</a></p>
+              { error && (
+                <p className="error-message">{error}</p>
+              )}
             </form>
         </div>
       </div>
-      <div className="form-1-div">
-        <form className="form-1"
-          action={async () => {
-          "use server"
-          await signIn("github")
-          } }
-          >
-          <button className="github-button" type="submit">Signin with GitHub</button>
-        </form>
-      </div>
+
+        <div className="form-1-div">
+          <form className="form-1">
+            <button /* onClick={() => signIn("github")} */ className="github-button" type="submit">Signin with GitHub</button>
+          </form>
+        </div>  
 
       <footer>
         <ul className="footer-ul">
