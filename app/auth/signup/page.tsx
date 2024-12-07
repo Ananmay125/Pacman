@@ -2,27 +2,12 @@
 
 import "@/app/css/authentication.css" 
 import "@/app/css/footer.css"
-import { useState } from 'react'
 
 import "@/app/css/authentication.css" 
 import "@/app/css/footer.css"
 import GitHubButton from "@/app/components/github-button/page"
 
 export default function SignIn() {
-
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-
-    if(!name || !password){
-      setError("All Fields are nessasary");
-    }else {
-      setError("");
-    }
-  };
 
   return (
     <>
@@ -36,17 +21,17 @@ export default function SignIn() {
               <h1>Sign Up</h1>
               <label>
                   Username<br/>
-                  <input onChange={(e) => setName(e.target.value)} name="username" type="text" /><br/>
+                  <input name="username" type="text" /><br/>
               </label>
               <label>
                   Password<br/>
-                  <input onChange={(e) => setPassword(e.target.value)}  name="password" type="password" /><br/>
+                  <input name="password" type="password" /><br/>
               </label>
               <button className="credential-signin-button">Sign Up</button>
               <p>already signed up? login <a className="sign-text" href="signup">here</a></p>
-              { error && (
+{/*               { error && (
                 <p className="error-message">{error}</p>
-              )}
+              )} */}
             </form>
         </div>
       </div>
