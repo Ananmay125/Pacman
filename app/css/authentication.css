@@ -107,6 +107,8 @@ form{
     height: 60px;
     border-radius: 10px;
     padding: 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .form-1-div{

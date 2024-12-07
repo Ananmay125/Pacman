@@ -6,6 +6,7 @@ import { useState } from 'react'
 
 import "@/app/css/authentication.css" 
 import "@/app/css/footer.css"
+import GitHubButton from "@/app/components/github-button/page"
 
 export default function SignIn() {
 
@@ -31,7 +32,7 @@ export default function SignIn() {
       </nav>
       <div className="form-container">
         <div className="form-container-div">
-          <form onSubmit={handleSubmit}>
+          <form>
               <h1>Sign Up</h1>
               <label>
                   Username<br/>
@@ -50,13 +51,9 @@ export default function SignIn() {
         </div>
       </div>
       <div className="form-1-div">
-        <form className="form-1"
-/*           action={async () => {
-              "use server"
-              await signIn("github")
-          } } */>
-          <button className="github-button" type="submit">Sign Up with GitHub</button>
-        </form>
+          <div className="form-1">
+            <GitHubButton/>
+          </div>
       </div>
 
       <footer>
