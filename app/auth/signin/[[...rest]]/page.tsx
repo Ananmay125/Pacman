@@ -1,5 +1,5 @@
 "use client"
-import GitHubButton from "@/app/components/github-button/page"
+import GitHubButton from "@/app/components/github-button/GitHubButton"
 import "@/app/css/authentication.css" 
 import "@/app/css/footer.css"
 

@@ -5,7 +5,7 @@ import "@/app/css/footer.css"
 
 import "@/app/css/authentication.css" 
 import "@/app/css/footer.css"
-import GitHubButton from "@/app/components/github-button/page"
+import GitHubButton from "@/app/components/github-button/GitHubButton"
 
 export default function SignIn() {
 
