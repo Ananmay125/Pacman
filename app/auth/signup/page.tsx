@@ -6,13 +6,15 @@ import "@/app/css/footer.css"
 import "@/app/css/authentication.css" 
 import "@/app/css/footer.css"
 import GitHubButton from "@/app/components/github-button/GitHubButton"
+import Image from "next/image"
+import Link from "next/link"
 
 export default function SignIn() {
 
   return (
     <>
       <nav>
-        <img src="/Pacman.svg" alt="logo" className="logo"></img>
+        <Image width={30} height={30} src="/Pacman.svg" alt="logo" className="logo"/>
         <h1 className="main-heading">Pacman</h1>
       </nav>
       <div className="form-container">
@@ -28,7 +30,7 @@ export default function SignIn() {
                   <input name="password" type="password" /><br/>
               </label>
               <button className="credential-signin-button">Sign Up</button>
-              <p>already signed up? login <a className="sign-text" href="signup">here</a></p>
+              <p>already signed up? login <Link className="sign-text" href="/auth/signin">here</Link></p>
 {/*               { error && (
                 <p className="error-message">{error}</p>
               )} */}
@@ -43,7 +45,7 @@ export default function SignIn() {
 
       <footer>
         <ul className="footer-ul">
-          <img src="/Pacman.svg" alt="logo" className="logo-1"></img>
+          <Image width={30} height={30} src="/Pacman.svg" alt="logo" className="logo-1"/>
           <h1 className="main-heading-footer">Pacman</h1>
           <li className="footer-li">Home</li>
           <li className="footer-li">Favorites</li>
