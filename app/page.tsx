@@ -1,22 +1,27 @@
 import "./css/page.css";
 import "./css/footer.css"
 import "./css/content.css"
+import "./css/responsive.css"
 
 export default function Home() {
+
+  const client_username = "bruh";
+
   return (
     <>
       <nav>
         <img src="Pacman.svg" alt="logo" className="logo"></img>
         <h1 className="main-heading">Pacman</h1>
         <ul className="navbar-ul">
-          <li className="navbar-li">Games</li>
-          <li className="navbar-li">Roms</li>
-          <li className="navbar-li">Favorites</li>
-          <li className="navbar-li">Home</li>
-          <li className="navbar-li">Peak</li>
-          <li className="navbar-li">{}</li>
+          <li className="navbar-li"><a className="navbar-li-a" href="/auth/signin">Games</a></li>
+          <li className="navbar-li"><a className="navbar-li-a" href="/auth/signin">Roms</a></li>
+          <li className="navbar-li"><a className="navbar-li-a" href="/auth/signin">Favorites</a></li>
+          <li className="navbar-li"><a className="navbar-li-a" href="/auth/signin">Home</a></li>
+          <li className="navbar-li"><a className="navbar-li-a" href="/auth/signin">Peak</a></li>
+          <li className="navbar-li"><a className="navbar-li-a" href="/auth/signin">Sign-in</a></li>
         </ul>
         <img src="favicon.ico" className="avatar"></img>
+        <img src="../menu.png" className="drop-menu"></img>
       </nav>
       <main>
           <div className="hero-text-div">
@@ -33,6 +38,7 @@ export default function Home() {
             <div className="emulate-box">
               <div className="emulate">
                 <h2 className="emulate-box-text">Drop the ROM here</h2>
+                <input type="file" className="picker"/>
               </div>
             </div>
           </div>

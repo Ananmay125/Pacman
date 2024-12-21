@@ -1,9 +1,33 @@
 "use client"
+import { signIn } from "next-auth/react"
+import { useState } from "react"
+import { useRouter } from "next/navigation"
 import GitHubButton from "@/app/components/github-button/GitHubButton"
+
 import "@/app/css/authentication.css" 
 import "@/app/css/footer.css"
 
 export default function SignIn() {
+
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+  const router = useRouter()
+
+  const handleSignIn = async () => {
+    const result = await signIn("credentials", {
+      redirect: false,
+      username,
+      password,
+    })
+
+    if (result?.error) {
+      setError(result.error)
+    } else {
+      router.push("/")
+    }
+  }
+
   return (
     <>
       <nav>
@@ -12,29 +36,40 @@ export default function SignIn() {
       </nav>
       <div className="form-container">
         <div className="form-container-div">
-          <form>
-              <h1>Login</h1>
-              <label>
-                  Username<br/>
-                  <input name="username" type="text" /><br/>
-              </label>
-              <label>
-                  Password<br/>
-                  <input name="password" type="password" /><br/>
-              </label>
-              <button className="credential-signin-button">Sign In</button>
-              <p>Don&apos;t have an account sign up <a className="sign-text" href="signin">here</a></p>
-{/*                     { error && (
-                <p className="error-message">{error}</p>
-              )} */}
-            </form>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault()
+              handleSignIn()
+            }}
+          >
+            <h1>Login</h1>
+            <label>Username<br/>
+              <input
+                name="username"
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              /><br/>
+            </label>
+            <label>Password<br/>
+              <input
+                name="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              /><br/>
+            </label>
+            <button type="submit" className="credential-signin-button">Sign In</button>
+            <p>Don&apos;t have an account? Sign up <a className="sign-text" href="signup">here</a></p>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+          </form>
         </div>
       </div>
-        <div className="form-1-div">
-          <div className="form-1">
-            <GitHubButton/>
-          </div>
-        </div>  
+      <div className="form-1-div">
+        <div className="form-1">
+          <GitHubButton />
+        </div>
+      </div>
 
       <footer>
         <ul className="footer-ul">
