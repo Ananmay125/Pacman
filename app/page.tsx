@@ -6,9 +6,6 @@ import "./css/responsive.css"
 import Link from "next/link";
 
 export default function Home() {
-
-  const client_username = "bruh";
-
   return (
     <>
       <nav>
