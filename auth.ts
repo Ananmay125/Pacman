@@ -12,8 +12,15 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         password: { label: "Password", type: "password" }
       },
       authorize: async (credentials) => {
-        const user = { id: "1", name: "John Doe", email: "john.doe@example.com" }
-        if (credentials.username === "john" && credentials.password === "password") {
+        const users = [
+          { id: "1", name: "John Doe", email: "john.doe@example.com", username: "john", password: "password" },
+          { id: "2", name: "Bruh", email: "jane.smith@example.com", username: "bruh", password: "bruh" },
+          { id: "3", name: "Admin", email: "jane.smith@example.com", username: "admin", password: "admin" },
+          // Add more users as needed
+        ];
+
+        const user = users.find(user => user.username === credentials.username && user.password === credentials.password);
+        if (user) {
           return user;
         } else {
           return null;
@@ -24,13 +31,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   callbacks: {
     async signIn({ user }) {
       if (user) {
-        return true
+        return true;
       } else {
-        return false
+        return false;
       }
     },
     async redirect({ url, baseUrl }) {
-      return baseUrl
+      return baseUrl;
     }
   }
 })

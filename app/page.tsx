@@ -4,12 +4,13 @@ import "./css/content.css"
 import "./css/responsive.css"
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <nav>
-        <img src="Pacman.svg" alt="logo" className="logo"></img>
+        <Image width={30} height={30} src="/Pacman.svg" alt="logo" className="logo"/>
         <h1 className="main-heading">Pacman</h1>
         <ul className="navbar-ul">
           <li className="navbar-li"><Link className="navbar-li-a" href="/auth/signin">Games</Link></li>
@@ -19,8 +20,8 @@ export default function Home() {
           <li className="navbar-li"><Link className="navbar-li-a" href="/auth/signin">Peak</Link></li>
           <li className="navbar-li"><Link className="navbar-li-a" href="/auth/signin">Sign-in</Link></li>
         </ul>
-        <img src="favicon.ico" className="avatar"></img>
-        <img src="../menu.png" className="drop-menu"></img>
+        <Image width={30} height={30} src="/favicon.ico" alt="user-avatar" className="avatar"/>
+        <Image width={30} height={30} src="/../menu.png" alt="drop-menu" className="drop-menu"/>
       </nav>
       <main>
           <div className="hero-text-div">
@@ -74,7 +75,7 @@ export default function Home() {
       </main>
       <footer>
         <ul className="footer-ul">
-          <img src="Pacman.svg" alt="logo" className="logo"></img>
+          <Image width={30} height={30} src="/Pacman.svg" alt="logo" className="logo"/>
           <h1 className="main-heading-footer">Pacman</h1>
           <li className="footer-li">Home</li>
           <li className="footer-li">Favorites</li>
