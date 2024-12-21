@@ -3,6 +3,8 @@ import "./css/footer.css"
 import "./css/content.css"
 import "./css/responsive.css"
 
+import Link from "next/link";
+
 export default function Home() {
 
   const client_username = "bruh";
@@ -13,12 +15,12 @@ export default function Home() {
         <img src="Pacman.svg" alt="logo" className="logo"></img>
         <h1 className="main-heading">Pacman</h1>
         <ul className="navbar-ul">
-          <li className="navbar-li"><a className="navbar-li-a" href="/auth/signin">Games</a></li>
-          <li className="navbar-li"><a className="navbar-li-a" href="/auth/signin">Roms</a></li>
-          <li className="navbar-li"><a className="navbar-li-a" href="/auth/signin">Favorites</a></li>
-          <li className="navbar-li"><a className="navbar-li-a" href="/auth/signin">Home</a></li>
-          <li className="navbar-li"><a className="navbar-li-a" href="/auth/signin">Peak</a></li>
-          <li className="navbar-li"><a className="navbar-li-a" href="/auth/signin">Sign-in</a></li>
+          <li className="navbar-li"><Link className="navbar-li-a" href="/auth/signin">Games</Link></li>
+          <li className="navbar-li"><Link className="navbar-li-a" href="/auth/signin">Roms</Link></li>
+          <li className="navbar-li"><Link className="navbar-li-a" href="/auth/signin">Favorites</Link></li>
+          <li className="navbar-li"><Link className="navbar-li-a" href="/auth/signin">Home</Link></li>
+          <li className="navbar-li"><Link className="navbar-li-a" href="/auth/signin">Peak</Link></li>
+          <li className="navbar-li"><Link className="navbar-li-a" href="/auth/signin">Sign-in</Link></li>
         </ul>
         <img src="favicon.ico" className="avatar"></img>
         <img src="../menu.png" className="drop-menu"></img>
@@ -28,7 +30,7 @@ export default function Home() {
             <h1 className="hero-text">Play any <span>Arcade</span> games from <span>anywhere!</span></h1>
           </div>
           <div className="button-div">
-            <button className="get-started"><a href="#main-section">Get Started</a></button>
+            <button className="get-started"><Link href="#main-section">Get Started</Link></button>
           </div>
           <div id="emulate-game-div">
             <div className="emulate-game-text-div">

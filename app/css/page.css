@@ -57,6 +57,10 @@ span{
     color: blue;
 }
 
+Link{
+    margin: 0;
+}
+
 .navbar-li-a{
     cursor: pointer;
     color: blue;
